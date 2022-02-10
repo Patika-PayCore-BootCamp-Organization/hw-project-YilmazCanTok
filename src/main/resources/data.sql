@@ -52,7 +52,7 @@ INSERT INTO dormitory(name, address, block_number) VALUES ('ALAADDIN YURDU', 'Ko
                                                           ('ALİ ULVİ YURDU', 'Bosna Hersek Mahallesi', '2'),
                                                           ('MEVLANA YURDU', 'Yazır Mahallesi', '2');
 
-INSERT INTO block(dormitory_id, name) VALUES ('1', 'A'),
+INSERT INTO block(dormitory_id, name) VALUES ('1','A'),
                                              ('1','B'),
                                              ('1','C'),
                                              ('1','D'),
