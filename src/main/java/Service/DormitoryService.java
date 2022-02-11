@@ -7,12 +7,12 @@ public interface DormitoryService {
 
     List<Dormitory> getAllDormitories();
 
-    Dormitory getDormitory(String name);
+    Dormitory getDormitory(Integer id);
 
     boolean addDormitory(Dormitory dormitory);
 
-    Dormitory updateDormitory(String name, Dormitory dormitory);
+    Dormitory updateDormitory(Dormitory dormitory);
 
-    boolean deleteDormitory(String name);
+    boolean deleteDormitory(Integer id);
 
 }
