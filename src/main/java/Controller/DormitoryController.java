@@ -25,7 +25,7 @@ public class DormitoryController {
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public Dormitory getDormitory(@RequestBody Integer id){    //Here we get our dormitory from it's id.
+    public Dormitory getDormitory(@RequestBody @Min(1) Integer id){    //Here we get our dormitory from it's id. It must be bigger than 0.
         return dormitoryService.getDormitory(id);
     }
 
