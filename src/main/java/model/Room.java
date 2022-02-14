@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @NoArgsConstructor
@@ -15,12 +17,13 @@ import java.util.List;
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer number;
+    private Integer id;
+    @NotNull(message = "Room Number cannot be null")
+    private String number;
     @ManyToOne(cascade = CascadeType.MERGE)
     private Block block;
     @ManyToOne(cascade = CascadeType.MERGE)
     private Dormitory dormitory;
     @OneToMany(cascade = CascadeType.MERGE)
-    @Max(4)
     private List<Student> students;
 }
