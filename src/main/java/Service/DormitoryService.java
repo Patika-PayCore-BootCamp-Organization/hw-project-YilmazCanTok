@@ -1,6 +1,5 @@
 package Service;
 import model.Dormitory;
-
 import java.util.List;
 
 public interface DormitoryService {
